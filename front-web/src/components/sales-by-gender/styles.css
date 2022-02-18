@@ -1,0 +1,18 @@
+.sales-by-gender-main-container {
+  margin-top: 10px;
+  height: 517px;
+  padding: 40px 50px 0 15px;
+}
+
+.sales-by-gender-quantity {
+  margin-bottom: 60px;
+}
+
+.sales-by-gender-quantity-title {
+  font-size: 36px;
+}
+
+.sales-by-gender-quantity-label {
+  color: var(--light-color);
+  font-size: 18px;
+}

@@ -11,7 +11,12 @@ const options = [
 const Filter = () => {
   return (
     <div className="filter-container base-card">
-      <Select classNamePrefix="filter-select" options={options} placeholder="Selecione a cidade" />
+      <Select
+        classNamePrefix="filter-select"
+        options={options}
+        placeholder="Selecione a cidade"
+        isClearable
+      />
     </div>
   );
 };
