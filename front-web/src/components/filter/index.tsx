@@ -1,17 +1,17 @@
+import Select from 'react-select';
+
 import './styles.css';
 
-import React from 'react';
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+];
 
 const Filter = () => {
   return (
     <div className="filter-container base-card">
-      <select className="filter-select">
-        <option value="">Selecione uma cidade</option>
-        <option value="">Uberaba</option>
-        <option value="">Uberlândia</option>
-        <option value="">Araguari</option>
-        <option value="">Ituiutaba</option>
-      </select>
+      <Select classNamePrefix="filter-select" options={options} placeholder="Selecione a cidade" />
     </div>
   );
 };
