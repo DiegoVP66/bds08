@@ -15,7 +15,7 @@ const PieChart = ({ labels, series }: Props) => {
         options={buildPieChartConfig(labels)}
         type="donut"
         width="400"
-        height="350"
+        height="360"
         series={series}
       />
     </div>

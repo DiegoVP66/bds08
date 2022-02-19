@@ -10,3 +10,9 @@
 .main-header-title {
   font-size: 24px;
 }
+
+@media (min-width: 576px) {
+  .main-header-container {
+    padding-left: 50px;
+  }
+}
