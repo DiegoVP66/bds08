@@ -1,3 +1,4 @@
+import PieChart from 'components/pie-chart-card';
 import './styles.css';
 
 const SalesByGender = () => {
@@ -7,8 +8,8 @@ const SalesByGender = () => {
         <h2 className="sales-by-gender-quantity-title">R$ 746.484,00</h2>
         <span className="sales-by-gender-quantity-label">Total de vendas</span>
       </div>
-      <div>
-        <h1>PieChart</h1>
+      <div className="pie-chart-container">
+        <PieChart name="" labels={['Masculino', 'Feminino', 'Outro']} series={[20, 30, 50]} />
       </div>
     </div>
   );
