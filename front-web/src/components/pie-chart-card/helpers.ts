@@ -11,7 +11,7 @@ export const buildPieChartConfig = (labels: string[] = [], name?: string) => {
       offsetY: 0,
       style: {
         color: '#FFF',
-        fontSize: '16px',
+        fontSize: '18px',
         fontFamily: 'Ubuntu, sans-serif'
       }
     },

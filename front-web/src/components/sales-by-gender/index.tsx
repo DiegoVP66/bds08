@@ -1,4 +1,5 @@
 import PieChart from 'components/pie-chart-card';
+
 import './styles.css';
 
 const SalesByGender = () => {
