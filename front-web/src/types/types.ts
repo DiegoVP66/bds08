@@ -1,7 +1,7 @@
 export type Gender = 'MALE' | 'FEMALE' | 'OTHER';
 
 export type FilterData = {
-  gender?: Gender;
+  store: Store;
 };
 
 export type Store = {
@@ -12,4 +12,9 @@ export type Store = {
 export type SalesByGenderType = {
   gender: Gender;
   sum: number;
+};
+
+export type PieChartConfig = {
+  labels?: string[];
+  series?: number[];
 };

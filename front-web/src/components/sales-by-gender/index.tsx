@@ -1,20 +1,22 @@
 import PieChart from 'components/pie-chart-card';
 import { useEffect, useState } from 'react';
-import { SalesByGenderType } from 'types/types';
-import { sumSalesByByGender } from './helpers';
+import { PieChartConfig, SalesByGenderType } from 'types/types';
 import { makeRequest } from 'utils/request';
 import { formatPrice } from '../../utils/formatters';
+import { buildSalesByGenderChart, sumSalesByGender } from './helpers';
 
 import './styles.css';
 
 const SalesByGender = () => {
   const [totalSum, setTotalSum] = useState(0);
+  const [salesByGender, setSalesByGender] = useState<PieChartConfig>();
 
   useEffect(() => {
     makeRequest.get<SalesByGenderType[]>('/sales/by-gender').then((response) => {
-      console.log(response.data);
-      const newTotalSum = sumSalesByByGender(response.data);
+      const newTotalSum = sumSalesByGender(response.data);
       setTotalSum(newTotalSum);
+      const newSalesByGender = buildSalesByGenderChart(response.data);
+      setSalesByGender(newSalesByGender);
     });
   }, []);
 
@@ -25,7 +27,7 @@ const SalesByGender = () => {
         <span className="sales-by-gender-quantity-label">Total de vendas</span>
       </div>
       <div className="pie-chart-container">
-        <PieChart name="" labels={['Masculino', 'Feminino', 'Outro']} series={[20, 30, 50]} />
+        <PieChart name="" labels={salesByGender?.labels} series={salesByGender?.series} />
       </div>
     </div>
   );

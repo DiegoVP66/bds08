@@ -32,7 +32,7 @@ export const buildPieChartConfig = (labels: string[] = [], name?: string) => {
     dataLabels: {
       enabled: true,
       formatter: function (val) {
-        return val + '%';
+        return Number(val).toFixed(2) + '%';
       }
     },
     plotOptions: {
