@@ -4,7 +4,6 @@ import './styles.css';
 
 type Props = {
   labels?: string[];
-  name: string;
   series?: number[];
 };
 
