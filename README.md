@@ -13,3 +13,7 @@ As seguintes tecnologias foram usadas na construção do projeto:
 - Java
 - Spring Boot
 - Postman
+
+<div>
+   <img src="https://user-images.githubusercontent.com/84286836/154872132-f3d2e0e1-85bc-490d-9613-3d158e21e34c.png" alt="sales-filter" />
+</div>
